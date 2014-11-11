@@ -6,7 +6,7 @@ module ShuntCache
     include Singleton
     class << self
       extend Forwardable
-      def_delegators :instance, :shunt!, :unshunt!, :status, :shunted?
+      def_delegators :instance, :shunt!, :unshunt!, :status, :shunted?, :clear!
     end
     attr_accessor :key, :cache, :logger
 
@@ -25,6 +25,11 @@ module ShuntCache
 
     def shunted?
       status == SHUNTED
+    end
+
+    # reset to default
+    def clear!
+      unshunt!
     end
 
     def shunt!

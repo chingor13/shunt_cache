@@ -38,6 +38,7 @@ class StatusTest < MiniTest::Unit::TestCase
     # unshunt!
     assert ShuntCache::Status.unshunt!
 
+    # ensure that we've set the right state
     assert_equal false, ShuntCache::Status.shunted?
     assert_equal ShuntCache::Status::UNSHUNTED, ShuntCache::Status.status
   end

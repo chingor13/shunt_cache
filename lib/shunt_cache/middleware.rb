@@ -1,5 +1,6 @@
 module ShuntCache
   class Middleware
+    attr_accessor :endpoint_matcher
 
     def initialize(app, options = {})
       @app = app
@@ -14,7 +15,7 @@ module ShuntCache
           env.fetch('REQUEST_URI', '')
         end
       end
-      if path.match(@endpoint_matcher) && ShuntCache::Status.shunted?
+      if path.match(endpoint_matcher) && ShuntCache::Status.shunted?
         return ['503', {'Content-Type' => 'text/html'}, ['Maintenance']]
       end
       @app.call(env)

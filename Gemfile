@@ -12,4 +12,5 @@ else
   "~> #{as_version}"
 end
 
+gem 'rack'
 gem "activesupport", as_version
