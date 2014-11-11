@@ -26,7 +26,9 @@ Or install it yourself as:
 
 ## Usage
 
-If you're using rails, the railtie will automatically be loaded. The railtie will install the middleware and rake tasks.
+### Rails
+
+If you're using rails, the railtie will automatically be loaded. The railtie will automatically install the middleware and rake tasks.
 
 ### Rake tasks
 
@@ -37,7 +39,7 @@ If you're using rails, the railtie will automatically be loaded. The railtie wil
 
 ### Capistrano Deploys
 
-Assuming capistrano version 3 (nice sequencing):
+Assuming capistrano version 3 (nice in-sequence commands):
 
 ```
 
