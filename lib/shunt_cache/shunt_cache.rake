@@ -13,4 +13,9 @@ namespace :shunt_cache do
   task :status => :environment do
     puts ShuntCache::Status.status
   end
+
+  desc "Wait until we get a 200 or 300 ranged http response code for ENV['URL']"
+  task :wait_for_http do
+    puts "checking: #{ENV['URL']}"
+  end
 end
