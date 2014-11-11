@@ -10,8 +10,8 @@ module ShuntCache
     end
     attr_accessor :key, :cache, :logger
 
-    SHUNT_STATUS_SHUNTED = "shunted"
-    SHUNT_STATUS_UNSHUNTED = "ok"
+    SHUNTED = "shunted"
+    UNSHUNTED = "ok"
 
     def self.configure
       yield instance
@@ -19,22 +19,22 @@ module ShuntCache
 
     def status
       cache.fetch(key) do
-        SHUNT_STATUS_UNSHUNTED
+        UNSHUNTED
       end
     end
 
     def shunted?
-      status == SHUNT_STATUS_SHUNTED
+      status == SHUNTED
     end
 
     def shunt!
       log(:info, "Shunting site with key: #{key}")
-      cache.write(key, SHUNT_STATUS_SHUNTED)
+      cache.write(key, SHUNTED)
     end
 
     def unshunt!
       log(:info, "Unshunting site with key: #{key}")
-      cache.write(key, SHUNT_STATUS_UNSHUNTED)
+      cache.write(key, UNSHUNTED)
     end
 
     private
