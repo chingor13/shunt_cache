@@ -16,9 +16,8 @@ module ShuntCache
             code = response.code.to_i
             return true if 200 <= code && 399 >= code
           rescue Errno::ECONNREFUSED, Timeout::Error => e
-            sleep(wait_time)
-            next
           end
+          sleep(wait_time)
         end
 
         false
