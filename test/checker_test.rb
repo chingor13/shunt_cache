@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CheckerTest < Minitest::Test
+class CheckerTest < MiniTest::Unit::TestCase
   TEST_URL = 'http://localhost:3000/options/full_stack_status'
 
   def test_maintenance

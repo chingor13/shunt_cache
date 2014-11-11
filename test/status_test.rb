@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class StatusTest < Minitest::Test
+class StatusTest < MiniTest::Unit::TestCase
 
   def setup
     super
