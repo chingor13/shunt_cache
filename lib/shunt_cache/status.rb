@@ -29,7 +29,7 @@ module ShuntCache
 
     # reset to default
     def clear!
-      unshunt!
+      cache.delete(key)
     end
 
     def shunt!

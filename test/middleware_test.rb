@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MiddlewareTest < MiniTest::Unit::TestCase
+class MiddlewareTest < Minitest::Test
 
   def setup
     super
