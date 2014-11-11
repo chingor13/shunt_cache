@@ -1,4 +1,4 @@
-# ShuntCache
+# ShuntCache [![Build Status](https://travis-ci.org/chingor13/shunt_cache.png)](https://travis-ci.org/chingor13/shunt_cache)
 
 Store temporary shunt status in a cache to conditionally show maintenance page.
 
