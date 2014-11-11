@@ -30,7 +30,7 @@ module ShuntCache
         response = nil
         Net::HTTP.start(uri.host, uri.port) do |http|
           http.read_timeout = timeout
-          request = Net::HTTP::Get.new uri
+          request = Net::HTTP::Get.new(uri.path)
           response = http.request(request)
         end
         response
