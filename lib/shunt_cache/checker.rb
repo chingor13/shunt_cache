@@ -5,8 +5,8 @@ module ShuntCache
 
     class << self
       def wait_for_http(url, options = {})
-        retries = options.fetch(:retry, 3)
-        wait_time = options.fetch(:wait_time, 10)
+        retries = options.fetch(:retry, 10)
+        wait_time = options.fetch(:wait_time, 6)
 
         uri = URI(url)
 
