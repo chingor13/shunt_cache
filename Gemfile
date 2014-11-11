@@ -14,3 +14,5 @@ end
 
 gem 'rack'
 gem "activesupport", as_version
+
+gem "codeclimate-test-reporter", group: :test, require: nil
