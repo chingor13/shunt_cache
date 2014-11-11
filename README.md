@@ -1,4 +1,4 @@
-# ShuntCache [![Build Status](https://travis-ci.org/chingor13/shunt_cache.png)](https://travis-ci.org/chingor13/shunt_cache)
+# ShuntCache [![Build Status](https://travis-ci.org/chingor13/shunt_cache.png)](https://travis-ci.org/chingor13/shunt_cache)  [![Code Climate](https://codeclimate.com/github/chingor13/shunt_cache.png)](https://codeclimate.com/github/chingor13/shunt_cache) [![Code Coverage](https://codeclimate.com/github/chingor13/shunt_cache/coverage.png)](https://codeclimate.com/github/chingor13/shunt_cache)
 
 Store temporary shunt status in a cache to conditionally show maintenance page.
 
