@@ -17,7 +17,10 @@ namespace :shunt_cache do
   desc "Wait until we get a 200 or 300 ranged http response code for ENV['URL']"
   task :wait_for_http => :environment do
     url = ENV.fetch('URL')
-    success = ShuntCache::Checker.wait_for_http(url)
+    options = {
+      :host => ENV['HOST']
+    }
+    success = ShuntCache::Checker.wait_for_http(url, options)
     unless success
       puts "error checking: #{url} - never returned with status within 200..399"
       exit(1)
